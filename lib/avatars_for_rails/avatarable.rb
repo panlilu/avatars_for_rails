@@ -11,6 +11,8 @@ module AvatarsForRails
 
       has_attached_file :logo, avatarable_options
 
+      validates_attachment :image, content_type: { content_type: /\Aimage\/.*\Z/ }
+      
       before_validation :validate_crop_params, :crop_avatar,
                         :check_avatar_aspect_ratio
     end
@@ -36,7 +38,7 @@ module AvatarsForRails
 
       dimensions = avatar_tmp_file_dimensions
 
-      return if dimensions.first == dimensions.last 
+      return if dimensions.first == dimensions.last
 
       errors.add :logo_crop
     end
