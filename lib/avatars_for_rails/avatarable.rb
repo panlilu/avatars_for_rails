@@ -11,8 +11,8 @@ module AvatarsForRails
 
       has_attached_file :logo, avatarable_options
 
-      validates_attachment :image, content_type: { content_type: /\Aimage\/.*\Z/ }
-      
+      validates_attachment :logo, content_type: { content_type: /\Aimage\/.*\Z/ }
+
       before_validation :validate_crop_params, :crop_avatar,
                         :check_avatar_aspect_ratio
     end
