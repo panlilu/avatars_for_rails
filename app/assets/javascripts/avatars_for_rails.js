@@ -62,8 +62,8 @@ var AvatarForRails = AvatarForRails || (function($, undefined) {
       bgOpacity:   0.6,
       setSelect:   [ 0, 0, 200, 200 / ar ],
       aspectRatio: ar,
-      boxWidth: 450,
-      boxHeight: 400,
+      boxWidth: 600,
+      boxHeight: 600,
       onSelect: updateCrop,
       onChange: updateCrop
     });
