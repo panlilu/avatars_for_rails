@@ -1,6 +1,6 @@
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery-ui
 //= require jquery.Jcrop
 //= require jquery.form
 //= require jquery.fileupload
@@ -56,7 +56,7 @@ var AvatarForRails = AvatarForRails || (function($, undefined) {
 
     img = div.find('img.avatar-crop'),
     ar  = parseInt(img.attr('data-aspect_ratio'), 10);
-   
+
     img.Jcrop({
       bgColor:     'clear',
       bgOpacity:   0.6,
@@ -75,8 +75,8 @@ var AvatarForRails = AvatarForRails || (function($, undefined) {
     if ((coords.w === 0) || (coords.h === 0)){
       coords.x = 0;
       coords.y = 0;
-    }  
-  
+    }
+
     $('input[name*="logo_crop_x"]').val(coords.x / iW);
     $('input[name*="logo_crop_y"]').val(coords.y / iH);
     $('input[name*="logo_crop_w"]').val(coords.w / iW);
